@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
-		<title>Imersão Dev - Dia 3</title>
+		<title>Imersão Dev - Dia 5</title>
 	</head>
 	<body>
 		<a
@@ -20,22 +20,24 @@
 			/>
 		</a>
 		<div class="container">
-			<h1 class="page-title">Mentalista</h1>
+			<h1 class="page-title">Aluraflix</h1>
 			<img
-				src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-mentalista.svg"
+				src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg"
 				class="page-logo"
 				alt=""
-			/><br />
-			<label class="page-subtitle" for="valor"
-				>Digite um número de 0 a 10</label
-			>
-			<input type="number" id="valor" /><br />
-			<button type="submit" onclick="chutar()">Chutar</button>
-			<h2 class="resultado" id="resultado"></h2>
+			/>
+			<p class="page-subtitle">Qual seu filme favorito?</p>
+			<div class="form-wrapper">
+				<input
+					type="text"
+					id="filme"
+					name="filme"
+					placeholder="Insira endereço de imagem"
+				/>
+				<button onClick="adicionarFilme()">Adicionar Filme</button>
+			</div>
 		</div>
-
-		<script src="app.js"></script>
-
+		<div id="listaFilmes"></div>
 		<script src="./script.js"></script>
 	</body>
 </html>
