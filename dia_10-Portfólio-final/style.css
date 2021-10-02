@@ -89,6 +89,10 @@ body {
 	line-height: 48px;
 }
 
+.projetos-item a {
+	text-decoration: none;
+}
+
 .projetos-item iframe {
 	width: 50vw;
 	border-radius: 5px;
