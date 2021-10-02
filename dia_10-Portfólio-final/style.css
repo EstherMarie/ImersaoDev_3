@@ -91,6 +91,11 @@ body {
 
 .projetos-item a {
 	text-decoration: none;
+	color: #1c1c1c;
+}
+
+.projetos-item a:hover {
+	text-decoration: underline;
 }
 
 .projetos-item iframe {
