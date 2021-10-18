@@ -1,20 +1,30 @@
-rafa = {
-	nome: 'Rafa',
-	vitorias: 2,
-	empates: 1,
-	derrotas: 1,
-	pontos: 0
-}
+jogadores = [
+  rafa = {
+    nome: 'Rafa',
+    vitorias: 2,
+    empates: 1,
+    derrotas: 1,
+    pontos: 0
+  },
 
-paulo = {
-	nome: 'Paulo',
-	vitorias: 1,
-	empates: 1,
-	derrotas: 2,
-	pontos: 0
-}
+  paulo = {
+    nome: 'Paulo',
+    vitorias: 1,
+    empates: 1,
+    derrotas: 2,
+    pontos: 0
+  },
 
-# Observação: 
+  gui = {
+    nome: 'Gui',
+    vitorias: 1,
+    empates: 2,
+    derrotas: 3,
+    pontos: 0
+  }
+]
+
+# Observação:
 # Neste caso estamos utilizando símbolos como chaves.
 # Seria o mesmo que: rafa = {:nome=>"Rafa", :vitorias=>2, :empates=>1 :derrotas=>1}
 # Para acessar o valor dessas chaves: ex: rafa[:vitorias]
@@ -23,27 +33,26 @@ paulo = {
 # rafa = {"nome"=>"Rafa", "vitorias"=>2, "empates"=>1, "derrotas"=>1
 # Para acessar: rafa["vitorias"]
 
-def calculaPontos(jogador) 
-    pontos = jogador[:vitorias] * 3 + jogador[:empates]
-    return pontos
+def calculaPontos(jogador)
+  pontos = jogador[:vitorias] * 3 + jogador[:empates]
+
+  jogador[:pontos] = pontos
 end
 
-rafa[:pontos] = calculaPontos(rafa)
-paulo[:pontos] = calculaPontos(paulo)
+jogadores.each do |player|
+  calculaPontos(player)
+end
 
-# puts rafa
-# puts paulo
-
-jogadores = [rafa, paulo]
+puts jogadores
 
 def exibeJogadoresNaTela(jogadores)
-    for jogador in jogadores do
-        puts "\n"
+  for jogador in jogadores do
+    puts "\n"
 
-        jogador.each do | atributo |
-            puts "#{atributo[0]}: #{atributo[1]}"
-        end
+    jogador.each do | atributo |
+      puts "#{atributo[0]}: #{atributo[1]}"
     end
+  end
 end
 
 exibeJogadoresNaTela(jogadores)

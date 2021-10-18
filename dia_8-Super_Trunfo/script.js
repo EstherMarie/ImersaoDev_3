@@ -121,3 +121,9 @@ function exibirCartaMaquina() {
 
 	divCartaMaquina.innerHTML = moldura + nome + tagHTML;
 }
+
+// Para o botão do alerta
+
+function fecharAlerta() {
+  document.querySelector('.info').style.display = 'none'
+}
